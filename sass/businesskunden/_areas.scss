@@ -1,0 +1,28 @@
+@import "../loesung/_facts-section.scss";
+
+.icon {
+    font-size: 4rem;
+
+    &-small {
+        font-size: 3rem;
+    }
+}
+
+.business-area {
+    color: $secondary;
+
+    &:hover {
+        color: $secondary-hover;
+    }
+
+    .areas_link {
+        color: $secondary;
+        text-decoration: underline;
+        transition: all .2s;
+
+        &:hover {
+            color: $secondary-hover;
+        }
+    }
+
+}

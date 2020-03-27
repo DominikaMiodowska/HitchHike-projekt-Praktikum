@@ -1,0 +1,89 @@
+.body {
+    display: block;
+}
+
+// ###############  GROSSVERANSTALTUNGEN        ################################
+.grossveranst {
+    display: none;
+
+    .back {
+        color: $secondary;
+        font-weight: normal;
+        margin-left: 2rem;
+    }
+
+    &_facts {
+        position: relative;
+    }
+
+    &_info {
+
+        .nav-link {
+            font-size: $display2-size;
+            font-weight: bold;
+            color: $secondary-hover;
+            opacity: .4;
+        }
+
+        .nav-link.active {
+            background-color: $white;
+            color: $secondary;
+            font-size: $display2-size;
+            font-weight: bold;
+            opacity: 1;
+        }
+
+        .veranstalter {
+
+            &_box {
+                background-color: $white;
+
+                &-text {
+                    text-align: left;
+                }
+
+                &-tab {
+                    border-bottom: 1px solid $secondary;
+                    padding: 2rem 0;
+                }
+            }
+
+            &-icon {
+                font-size: 1.5rem;
+                float: left;
+            }
+        }
+    }
+
+    &_img {
+        text-align: center;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    h1 {
+        @include h1-size;
+        color: $secondary;
+    }
+
+    h3 {
+        @include h2-size($secondary);
+        font-size: $h3-font-size;
+    }
+
+    &_text {
+        @include p-size;
+    }
+
+    &_links {
+        @include media-breakpoint-up(lg) {
+            text-align: right;
+        }
+
+        text-align:center;
+    }
+}

@@ -1,0 +1,81 @@
+.pro-hitchhike {
+	text-align: center;
+
+	h2 {
+		@include h2-size(white);
+	}
+
+	h3 {
+		@include h3-size($secondary);
+
+		width: 55%;
+
+		@include media-breakpoint-down(md) {
+			width: 70%;
+		}
+	}
+
+	img {
+		width: 30%;
+
+		@include media-breakpoint-down(sm) {
+			width: 40%;
+		}
+	}
+
+	.pro-carousel-caption {
+		width: 55%;
+
+		@include media-breakpoint-down(sm) {
+			width: 90%;
+		}
+	}
+
+	.carousel-control {
+
+		&-next,
+		&-prev {
+			top: 9rem;
+			align-items: flex-start;
+
+			@include media-breakpoint-down(sm) {
+				top: 7rem;
+				align-items: flex-start;
+			}
+		}
+
+		&-prev-icon {
+			height: 6.2rem;
+			width: 6.2rem;
+			background-image: url(../img/Pfeil.svg);
+
+			@include media-breakpoint-down(sm) {
+				height: 2.5rem;
+				width: 2.5rem;
+			}
+		}
+
+		&-next-icon {
+			height: 6.2rem;
+			width: 6.2rem;
+			background-image: url(../img/Pfeil.svg);
+			transform: rotate(180deg);
+
+			@include media-breakpoint-down(sm) {
+				height: 2.5rem;
+				width: 2.5rem;
+			}
+		}
+
+		&-next:link,
+		&-prev:link {
+			color: $white;
+			opacity: 1;
+		}
+
+		&-next:hover,
+		&-prev:hover {
+			color: $light;
+		}
+	}
+}

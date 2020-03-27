@@ -1,0 +1,50 @@
+.fragen {
+	h2 {
+		@include h2-size($secondary);
+	}
+	.btn-link {
+		@include font-styles($secondary, $font-weight-bold, 1.25rem, $line-height);
+
+		@include media-breakpoint-down(xs) {
+			width: 90%;
+			text-align: left;
+			line-height: $line-height-xs;
+		}
+
+		&:hover {
+			text-decoration: underline;
+			color: $secondary;
+		}
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	.card {
+		border-bottom: 1px solid $info;
+		border-top: 1px solid $info;
+		border-right: none;
+		border-left: none;
+
+		&-header {
+			background-color: $white;
+			border-bottom: none;
+			border-right: none;
+			border-left: none;
+			position: relative;
+
+			.fragen_rotate {
+				cursor: pointer;
+			}
+
+			p[aria-expanded='false'] > .pfeil {
+				@include pfeil_fragen-position;
+			}
+
+			p[aria-expanded='true'] > .pfeil {
+				@include pfeil_fragen-position;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

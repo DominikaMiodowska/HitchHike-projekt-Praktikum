@@ -1,0 +1,190 @@
+.header {
+	font-size: $h4-font-size;
+
+	.businesskunden {
+		opacity: .8;
+	}
+
+	.close-language {
+		transform: rotate(180deg);
+	}
+
+	.language {
+		text-align: right;
+
+		a,
+		a:link {
+			color: $secondary;
+		}
+	}
+
+	.dropdown {
+		font-weight: $font-weight-bold;
+		display: inline-block;
+		color: $secondary;
+
+		.btn {
+			font-size: 1.15rem;
+			padding-top: 2px;
+		}
+
+		.btn:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+
+	nav {
+		.logo-img {
+			max-width: 21.8rem;
+			min-width: 9.3rem;
+			width: 100%;
+
+			&-link {
+				width: 35%;
+			}
+		}
+
+		.nav-hambuger {
+			outline: none;
+		}
+
+		.menu-desktop {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+
+			.navigation {
+				color: $primary;
+				position: relative;
+
+				.nav-link.active {
+					color: $primary-hover;
+				}
+
+				.nav-link {
+					font-weight: $font-weight-bold;
+					letter-spacing: 1.5px;
+					transition: all .2s;
+
+					&:hover {
+						color: $primary-hover;
+					}
+				}
+
+				.btn-nav-login {
+					color: $white;
+					background-color: $primary;
+					border-radius: $rounded-pill;
+				}
+
+				.btn-nav-login:hover {
+					background-color: $primary-hover;
+					color: $white;
+					cursor: pointer;
+				}
+			}
+		}
+
+		//   ################       MOBILE MENU     #################################
+		.menu-mobile {
+			padding: 0 1.5rem;
+			z-index: 998;
+			background-color: $primary;
+
+			.login-footer {
+				max-width: 50%;
+
+				@include media-breakpoint-down(xs) {
+					max-width: 100%;
+				}
+
+				.l-frage {
+					@include font-styles($white, $font-weight-bold, $display4-size, none);
+					display: inherit;
+					text-align: center;
+
+					@include media-breakpoint-down(sm) {
+						font-weight: $font-weight-normal;
+					}
+				}
+			}
+
+			.nav-close {
+				display: block;
+				position: absolute;
+				right: 1.5rem;
+				top: 1.5rem;
+				outline: none;
+				transition: transform .2s;
+
+				&:hover {
+					transform: scale(1.15);
+				}
+			}
+
+			.mobile-language {
+
+				.btn-language,
+				.btn-language:link {
+					color: $secondary;
+				}
+
+				.btn-language:hover {
+					text-decoration: none;
+					color: $secondary-hover;
+				}
+			}
+
+			.mobile-navigation {
+				padding-top: 5vh;
+				padding-bottom: 5vh;
+				position: relative;
+				display: block;
+
+				.mobile-menu {
+					width: 20rem;
+				}
+
+				a,
+				a:link {
+					@include h3-size($white);
+					font-weight: 400;
+					transition: all .4s;
+
+					@include media-breakpoint-down(xs) {
+						@include mobile-font-style($h4-font-size, $line-height-xs);
+					}
+				}
+
+				a:hover {
+					cursor: pointer;
+					color: $light;
+					font-weight: 600;
+				}
+
+				&-button {
+					@include h3-size($white);
+					font-weight: 400;
+					border: none;
+					background-color: transparent;
+					outline: none;
+					transition: all .3s;
+
+					@include media-breakpoint-down(xs) {
+						@include mobile-font-style($h4-font-size, $line-height-xs);
+					}
+
+					&:hover {
+						color: $light;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tab-pane {
+	width: 100%;
+}

@@ -1,0 +1,44 @@
+.angebot {
+
+    h2 {
+        text-align: center;
+        @include h2-size(white);
+    }
+
+    h3 {
+        text-align: center;
+        @include h3-size($secondary);
+
+    }
+
+
+    &_box {
+        background-color: $white;
+
+        @include media-breakpoint-up(lg) {
+
+            max-width: 49%;
+        }
+
+
+
+        &-text {
+            text-align: center;
+            min-height: 4.5rem;
+        }
+
+        &-tab {
+            border-bottom: 1px solid $secondary;
+            padding: 2rem 0;
+
+        }
+    }
+
+    &-icon {
+        font-size: 1.5rem;
+        float: left;
+        // height: 4rem;
+    }
+
+
+}

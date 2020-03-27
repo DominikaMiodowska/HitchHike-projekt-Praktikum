@@ -1,0 +1,43 @@
+.maps {
+	overflow: visible;
+	position: relative;
+
+	background-image: url("../img/RZ_HH_20190731_CMA_Map_CH_klein.svg");
+	background-repeat: no-repeat;
+	@include bg-img-position(28rem -11rem, 74rem 66rem);
+
+	@media (min-width: 1400px) {
+		@include bg-img-position(40rem -11rem, 74rem 66rem);
+	}
+	@include media-breakpoint-down(lg) {
+		@include bg-img-position(25rem -11rem, 68rem 66rem);
+	}
+
+	@include media-breakpoint-down(md) {
+		@include bg-img-position(15rem -11rem, 68rem 66rem);
+	}
+
+	@include media-breakpoint-down(sm) {
+		@include bg-img-position(0rem 5rem,54rem 68rem);
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding-bottom: 26rem;
+		@include bg-img-position(-9rem -1rem, 55rem 74rem);
+	}
+
+	&-text {
+		width: 45%;
+		@include p-size;
+
+		@include media-breakpoint-down(sm) {
+			width: 65%;
+		}
+		@include media-breakpoint-down(xs) {
+			width: 90%;
+		}
+		h2 {
+			@include h2-size($secondary);
+		}
+	}
+}

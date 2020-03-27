@@ -1,0 +1,55 @@
+// COLORS
+
+$primary: #fcbd00;
+$primary-hover: #e8a205;
+
+$secondary: #3a3a3a;
+$secondary-hover: #212121;
+
+$light: #f5f5f5;
+$info: #eeeeee;
+
+// BOX-SHADOW
+$box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.2);
+
+// FONT SIZE
+$h1-font-size: 3.5rem;
+$h2-font-size: 2.5rem;
+$h2-font-size-sm: 2.2rem;
+$h3-font-size: 1.8rem;
+$h4-font-size: 1.2rem;
+
+$display2-size: 1.5rem;
+$display3-size: 1.25rem;
+$display4-size: 1rem;
+$display5-size: 1.12rem;
+
+// 	LINE HEIGHT
+$line-height-xs: 1.5rem;
+$line-height: 1.6rem;
+$line-height-M: 2rem;
+$line-height-L: 2.5rem;
+$line-height-XL: 3rem;
+
+$font-family-default: "Source Sans Pro";
+
+// PADDING  -    MARGIN
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((0: 0,
+		1: $spacer,
+		2: ($spacer * .25),
+		3: ($spacer * .5),
+		4: ($spacer * 1.5),
+		5: ($spacer * 1.8),
+		6: ($spacer * 2),
+		7: ($spacer * 3),
+		8: ($spacer * 4),
+		9: ($spacer * 5),
+		10: ($spacer * 6),
+		11: ($spacer * 8),
+		12: ($spacer * 25),
+		13: ($spacer * 3.5)),
+	$spacers);
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 2600px) !default;

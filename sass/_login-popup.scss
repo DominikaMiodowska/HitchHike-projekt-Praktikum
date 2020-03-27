@@ -1,0 +1,151 @@
+//#########################         LOGIN DESKTOP           #################################
+.login {
+	&-popup {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba($secondary-hover, 0.85);
+		z-index: 9999;
+
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s;
+
+		@include media-breakpoint-down(sm) {
+			background-color: $white;
+		}
+
+		&:target {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		@include media-breakpoint-up(md) {
+			&:target .login-content {
+				opacity: 1;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+	}
+
+	&-content {
+		padding: 4rem 4rem 0;
+		width: 37rem;
+		height: 41rem;
+		background-color: $white;
+		box-shadow: 0 0 2.5rem rgba($black, 0.2);
+		position: absolute;
+
+		@include media-breakpoint-up(md) {
+			height: 39rem;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) scale(.35);
+			opacity: 0;
+			transition: all .3s;
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding: 5rem 2rem 0;
+			height: 100vh;
+			width: 100%;
+			opacity: 1;
+		}
+
+		@media (max-height: 531px) {
+			padding: 2rem 2rem 0;
+		}
+
+		h2 {
+			@include h2-size($secondary);
+		}
+
+		.form-control,
+		.form-control:visited,
+		.form-control:link {
+			font-size: $h4-font-size;
+			border: none;
+			border-bottom: 2px solid $info;
+			display: block;
+			width: 100%;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:focus {
+				border-bottom: 3px solid $primary;
+				outline: none;
+			}
+		}
+
+		.pass-vergessen {
+			float: right;
+			color: $primary;
+			font-weight: $font-weight-normal;
+			transition: all .2s;
+
+			@include media-breakpoint-down(sm) {
+				font-size: .85rem;
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: $primary-hover;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&-close {
+		img {
+			width: 3.7rem;
+			background-color: $primary;
+			padding: 1rem;
+			border-radius: 50%;
+			position: absolute;
+			top: -5rem;
+			transition: all .2s;
+
+			@include media-breakpoint-up(md) {
+				left: 50%;
+				right: 50%;
+				transform: translateX(-50%);
+			}
+
+			@include media-breakpoint-down(sm) {
+				position: absolute;
+				top: 2rem;
+				right: 1rem;
+				background-color: transparent;
+			}
+
+			&:hover {
+				background-color: $primary-hover;
+
+				@include media-breakpoint-down(sm) {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	&-bottom {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+
+		&-registrieren {
+			p {
+				@include media-breakpoint-down(sm) {
+					font-size: $display4-size;
+				}
+			}
+		}
+	}
+}

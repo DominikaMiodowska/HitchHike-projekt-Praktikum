@@ -1,0 +1,106 @@
+.rating {
+    h2 {
+        text-align: center;
+        @include h2-size($secondary);
+    }
+
+    h3 {
+        @include h3-size($secondary)
+    }
+
+    &_box {
+
+        @include media-breakpoint-up(xs) {
+            max-width: 90%;
+            min-width: 90%;
+
+        }
+
+        @include media-breakpoint-up(md) {
+            max-width: 42%;
+            min-width: 42%;
+
+        }
+
+        &-author {
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &-icon-l {
+        font-size: 4rem;
+        position: absolute;
+        left: -2rem;
+        top: -4rem;
+    }
+
+    &-icon-r {
+        font-size: 4rem;
+        position: absolute;
+        right: 20rem;
+        top: 9.5rem;
+
+        @include media-breakpoint-down(lg) {
+            right: 15rem;
+            top: 11.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            right: 0;
+            top: 16rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            right: 21.5rem;
+            top: 2.5rem;
+        }
+
+        @media (max-width:535px) {
+            right: 2rem;
+            top: 5.5rem;
+        }
+
+        &-R {
+            font-size: 4rem;
+            position: absolute;
+            right: 9rem;
+            top: 2.6rem;
+
+            @include media-breakpoint-down(lg) {
+                right: 13rem;
+                top: 5rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                right: 2.5rem;
+                top: 7rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                right: 7rem;
+                top: -1rem;
+            }
+
+            @media (max-width:535px) {
+                right: 2rem;
+                top: 1rem;
+            }
+        }
+
+    }
+
+    img {
+        position: absolute;
+        left: -3.7rem;
+        top: -.4rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50px;
+    }
+
+    //  &raquo; >>
+    //  &laquo;<< 
+}

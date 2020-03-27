@@ -1,0 +1,101 @@
+@mixin h1-size {
+	@include font-styles($white, $font-weight-bold, $h1-font-size, 4.3rem);
+
+	@include media-breakpoint-down(lg) {
+		@include mobile-font-style($h2-font-size, $line-height-XL);
+	}
+
+	@include media-breakpoint-down(sm) {
+		@include mobile-font-style($h2-font-size-sm, $line-height-L);
+	}
+
+	@include media-breakpoint-down(xs) {
+		@include mobile-font-style($h3-font-size, $line-height-M);
+	}
+}
+
+@mixin h2-size($color) {
+	@include font-styles($color, $font-weight-bold, $h2-font-size, $line-height-XL);
+
+	@include media-breakpoint-down(sm) {
+		@include mobile-font-style($h2-font-size-sm, $line-height-L);
+	}
+
+	@include media-breakpoint-down(xs) {
+		@include mobile-font-style(1.56rem, $line-height-M);
+	}
+}
+
+@mixin h3-size($color) {
+	@include font-styles($color, $font-weight-bold, $h3-font-size, 2.3rem);
+
+	@include media-breakpoint-down(sm) {
+		@include mobile-font-style($h4-font-size, $line-height);
+	}
+}
+
+@mixin p-size {
+	@include font-styles($secondary, none, $display3-size, $line-height);
+	opacity: 0.8;
+	font-family: $font-family-default;
+
+	@include media-breakpoint-down(sm) {
+		@include mobile-font-style($display5-size, $line-height-xs);
+	}
+}
+
+@mixin btn-styles ($color, $bg-color) {
+	color: $color;
+	background-color: $bg-color;
+	border: none;
+	font-weight: $font-weight-bold;
+	transition: background-color .2s, box-shadow .2s;
+
+	@include button-size(.6rem, 1rem, $h4-font-size, none, $rounded-pill);
+
+	@include media-breakpoint-down(xs) {
+		font-size: $display4-size;
+	}
+}
+
+@mixin btn-hover($color, $bg-color) {
+	color: $color;
+	background-color: $bg-color;
+	text-decoration: none;
+	box-shadow: $box-shadow;
+	cursor: pointer;
+}
+
+@mixin btn-quadrat($color, $bg-color) {
+	font-size: $display3-size;
+	transition: all .2s;
+	text-align: center;
+	color: $color;
+	background-color: $bg-color;
+
+
+}
+
+@mixin pfeil_fragen-position {
+	position: absolute;
+	right: 0;
+	top: 1.25rem;
+}
+
+@mixin font-styles($color, $font-weight, $font-size, $line-height) {
+	color: $color;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	font-family: $font-family-default;
+}
+
+@mixin mobile-font-style($font-size, $line-height) {
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin bg-img-position($bg-position, $bg-size) {
+	background-position: $bg-position;
+	background-size: $bg-size;
+}

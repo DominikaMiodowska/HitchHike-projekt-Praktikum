@@ -1,0 +1,79 @@
+.footer {
+	background-color: $light;
+
+	.social {
+		&_links {
+			width: 8rem;
+		}
+		&_link {
+			display: inline-block;
+			height: 2.5rem;
+			width: 2.5rem;
+			margin: .5rem .5rem 0 0;
+			border-radius: 100%;
+			background-color: $black;
+			border: none;
+			text-align: center;
+			transition: all .2s;
+			position: relative;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		a {
+			color: $light;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: -.1rem;
+				top: -.1rem;
+				display: block;
+				width: 2.7rem;
+				height: 2.7rem;
+				border-radius: 50px;
+			}
+		}
+		.icon {
+			margin: .5rem;
+			font-size: 1.5rem;
+		}
+	}
+
+	ul {
+		padding-left: 0;
+
+		li {
+			list-style-type: none;
+
+			a {
+				opacity: 0.8;
+				color: $secondary;
+				font-family: "Source Sans Pro";
+				@include mobile-font-style(1.06rem, 1.56rem);
+			}
+		}
+	}
+}
+
+// #################################    COPYRIGHT   #################################
+
+.copy {
+	background-color: $white;
+
+	.copy-boxs {
+		opacity: 0.4;
+		.copy-p {
+			text-align: center;
+		}
+		.copy-box {
+			justify-content: center;
+			text-align: center;
+
+			@include media-breakpoint-up(lg) {
+				justify-content: flex-end;
+			}
+		}
+	}
+}

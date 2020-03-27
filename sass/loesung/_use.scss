@@ -1,0 +1,14 @@
+.use {
+	overflow: hidden;
+
+	h2 {
+		@include h2-size($secondary);
+	}
+
+	.use_box {
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

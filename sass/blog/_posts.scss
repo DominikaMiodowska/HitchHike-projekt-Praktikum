@@ -1,0 +1,38 @@
+.post {
+
+    &-type {
+
+        text-transform: uppercase;
+
+    }
+
+    &_box {
+        position: relative;
+        min-height: min-content;
+
+        &_img {
+
+            &-big {
+                width: 100%;
+            }
+
+            &-small {
+                width: 100%;
+            }
+        }
+
+        h3 {
+            @include h3-size($secondary);
+        }
+
+        &-date {
+            position: absolute;
+            bottom: 0;
+            opacity: .4;
+        }
+    }
+
+    .btn-laden {
+        text-align: center;
+    }
+}
